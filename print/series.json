@@ -1,0 +1,38 @@
+{
+ "format": "sle-print3d-series-v1",
+ "series": [
+  {
+   "key": "saarpfalz-8500",
+   "name_de": "Saarpfalz 1:8500",
+   "role": "main",
+   "scale": 8500,
+   "tile_m": 2000,
+   "tile_mm": 235.2941176470588,
+   "exag": 2.0,
+   "datum_m": 180.0,
+   "datumMode": "series",
+   "printer": "stock",
+   "index": "saarpfalz-8500/index.json",
+   "tiles": 13,
+   "configured": true,
+   "updated": "2026-11-02T00:07:38Z"
+  },
+  {
+   "key": "detail-2125",
+   "name_de": "Detail 1:2125",
+   "role": "detail",
+   "scale": 2125,
+   "tile_m": 500,
+   "tile_mm": 235.2941176470588,
+   "exag": 1.5,
+   "datum_m": null,
+   "datumMode": "set",
+   "printer": "stock",
+   "index": "detail-2125/index.json",
+   "tiles": 6,
+   "configured": true,
+   "updated": "2026-11-02T00:07:38Z"
+  }
+ ],
+ "updated": "2026-11-02T00:07:38Z"
+}

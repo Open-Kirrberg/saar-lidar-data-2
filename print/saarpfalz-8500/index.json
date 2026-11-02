@@ -1,0 +1,1315 @@
+{
+ "format": "sle-print3d-v1",
+ "series": {
+  "key": "saarpfalz-8500",
+  "name_de": "Saarpfalz 1:8500",
+  "scale": 8500,
+  "tile_m": 2000,
+  "tile_mm": 235.2941176470588,
+  "vertices": 1001,
+  "cell_m": 2.0,
+  "cell_mm": 0.23529411764705882,
+  "exag": 2.0,
+  "datum_m": 180.0,
+  "datumMode": "series",
+  "datumMargin_m": null,
+  "base_mm": 4.0,
+  "origin": [
+   0,
+   0
+  ],
+  "rlpOffset_m": -0.07,
+  "role": "main",
+  "printer": "stock",
+  "placement_mm": [
+   19.4,
+   17.1
+  ],
+  "zFormula": "z_mm = base_mm + (max(h, datum_m) − datum_m) / scale · 1000 · exag (datum_m of the tile)",
+  "sampling": "area mean of the 1 m DGM (PixelIsArea) over a cell_m square centred on each vertex; vertices on the tile edges (shared edges bit-identical)",
+  "frame": "mm, X = east, Y = north, Z up, origin = tile lower-left corner at z = 0",
+  "text": {
+   "engraved": true,
+   "depth_mm": 0.6,
+   "mirrored": true,
+   "note_de": "Unterseite: gespiegelt graviert, lesbar nach Wenden um die Nord-Süd-Achse"
+  },
+  "connectors": {
+   "enabled": true,
+   "type": "bowtie",
+   "positions": [
+    0.25,
+    0.75
+   ],
+   "depth_mm": 2.0,
+   "length_mm": 10.0,
+   "waist_mm": 8.0,
+   "end_mm": 14.0,
+   "clearance_mm": 0.15,
+   "keyThickness_mm": 1.85,
+   "key": "keys/bowtie_key.stl"
+  }
+ },
+ "crs": "EPSG:25832",
+ "heightDatum": "DHHN2016",
+ "units": "mm",
+ "printer": "Bambu Lab P1S 0.4 (Druckfläche 256 × 256 mm, Höhe max. 250 mm) mit Standarddruckerprofil „Bambu Lab P1S 0.4 nozzle“",
+ "printerProfile": {
+  "mode": "stock",
+  "name": "Bambu Lab P1S 0.4 nozzle",
+  "inherits": null,
+  "file": null,
+  "bambuProfilesVersion": "02.08.00.05",
+  "plate_mm": [
+   256.0,
+   256.0
+  ],
+  "printableHeight_mm": 250.0,
+  "placement_mm": [
+   19.4,
+   17.1
+  ],
+  "bedExcludeArea": [
+   "0x0",
+   "18x0",
+   "18x28",
+   "0x28"
+  ],
+  "loadLine": "G-code X 18–240, Y 1.0–1.5 plus a stroke to Y 11 at X 240; plate Y = G-code Y + 2 (≤ 13.5 mm incl. line width)",
+  "note_de": "Standardprofil „Bambu Lab P1S 0.4 nozzle“ – kein eigenes Druckerprofil nötig. 3MF öffnen und nicht anordnen/zentrieren: die Kachel liegt bei X 19.4–254.7, Y 17.1–252.4 mm, rechts neben dem Sperrbereich vorne links (18 × 28 mm) und hinter der Ladelinie. Zentriert würde sie den Sperrbereich berühren."
+ },
+ "filament": {
+  "material": "PLA",
+  "density_g_cm3": 1.24,
+  "shell_mm": 1.2,
+  "infill": 0.15,
+  "formula": "solid = V·ρ; typical = ρ·(S + infill·(V − S)) with S = min(V, A·shell_mm) (A = mesh surface, shell ≈ 3 walls × 0.4 mm, also standing in for top/bottom skins); ±25 %"
+ },
+ "layout": "layout.png",
+ "sets": {
+  "explorer": [
+   "E378_N5460",
+   "E380_N5460",
+   "E382_N5460",
+   "E378_N5462",
+   "E380_N5462",
+   "E382_N5462",
+   "E378_N5464",
+   "E380_N5464",
+   "E382_N5464",
+   "E378_N5466",
+   "E380_N5466",
+   "E382_N5466"
+  ],
+  "extension-west": [
+   "E376_N5462"
+  ]
+ },
+ "keysNeeded": 36,
+ "attribution": "© GeoBasis-DE/LVGL-SL (2026), dl-de/by-2-0, Daten bearbeitet; © GeoBasis-DE/LVermGeoRP (2022), dl-de/by-2-0, www.lvermgeo.rlp.de, Daten bearbeitet",
+ "disclaimer_de": "Geländemodell zum Anschauen (Hypothesen, keine Befunde). Schauen, nicht graben.",
+ "updated": "2026-11-02T00:07:38Z",
+ "tiles": [
+  {
+   "id": "E378_N5466",
+   "grid": {
+    "col": 189,
+    "row": 2733
+   },
+   "bboxUTM": [
+    378000,
+    5466000,
+    380000,
+    5468000
+   ],
+   "wgs84": [
+    7.3201008,
+    49.3345184,
+    7.3482302,
+    49.3528977
+   ],
+   "wgs84Corners": [
+    [
+     7.320713,
+     49.3345184
+    ],
+    [
+     7.3482302,
+     49.334915
+    ],
+    [
+     7.347628,
+     49.3528977
+    ],
+    [
+     7.3201008,
+     49.3525008
+    ]
+   ],
+   "files": {
+    "3mf": "E378_N5466.3mf",
+    "png": "E378_N5466.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 16.401,
+    "max": 23.984,
+    "mean": 20.205
+   },
+   "h_m": {
+    "min": 232.7,
+    "max": 264.93,
+    "mean": 248.87
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 14.878,
+   "volume_cm3": 1116.2,
+   "surface_cm2": 1327.8,
+   "filament_g": {
+    "solid": 1384,
+    "typical": 376
+   },
+   "triangles": 2008594,
+   "vertices": 1004299,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "377_5465",
+     "377_5466",
+     "377_5467",
+     "377_5468",
+     "378_5465",
+     "378_5466",
+     "378_5467",
+     "378_5468",
+     "379_5465",
+     "379_5466",
+     "379_5467",
+     "379_5468",
+     "380_5465",
+     "380_5466",
+     "380_5467",
+     "380_5468"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:05:08Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E380_N5466",
+   "grid": {
+    "col": 190,
+    "row": 2733
+   },
+   "bboxUTM": [
+    380000,
+    5466000,
+    382000,
+    5468000
+   ],
+   "wgs84": [
+    7.347628,
+    49.334915,
+    7.375748,
+    49.353288
+   ],
+   "wgs84Corners": [
+    [
+     7.3482302,
+     49.334915
+    ],
+    [
+     7.375748,
+     49.3353051
+    ],
+    [
+     7.3751558,
+     49.353288
+    ],
+    [
+     7.347628,
+     49.3528977
+    ]
+   ],
+   "files": {
+    "3mf": "E380_N5466.3mf",
+    "png": "E380_N5466.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 16.335,
+    "max": 39.049,
+    "mean": 21.478
+   },
+   "h_m": {
+    "min": 232.42,
+    "max": 328.96,
+    "mean": 254.28
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 14.843,
+   "volume_cm3": 1186.5,
+   "surface_cm2": 1360.1,
+   "filament_g": {
+    "solid": 1471,
+    "typical": 393
+   },
+   "triangles": 2008642,
+   "vertices": 1004323,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "379_5465",
+     "379_5466",
+     "379_5467",
+     "379_5468",
+     "380_5465",
+     "380_5466",
+     "380_5467",
+     "380_5468",
+     "381_5465",
+     "381_5466",
+     "381_5467",
+     "381_5468",
+     "382_5465",
+     "382_5466",
+     "382_5467",
+     "382_5468"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:05:13Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.6,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E382_N5466",
+   "grid": {
+    "col": 191,
+    "row": 2733
+   },
+   "bboxUTM": [
+    382000,
+    5466000,
+    384000,
+    5468000
+   ],
+   "wgs84": [
+    7.3751558,
+    49.3353051,
+    7.4032663,
+    49.3536717
+   ],
+   "wgs84Corners": [
+    [
+     7.375748,
+     49.3353051
+    ],
+    [
+     7.4032663,
+     49.3356886
+    ],
+    [
+     7.4026842,
+     49.3536717
+    ],
+    [
+     7.3751558,
+     49.353288
+    ]
+   ],
+   "files": {
+    "3mf": "E382_N5466.3mf",
+    "png": "E382_N5466.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 19.305,
+    "max": 46.951,
+    "mean": 35.207
+   },
+   "h_m": {
+    "min": 245.05,
+    "max": 362.54,
+    "mean": 312.63
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 21.638,
+   "volume_cm3": 1947.1,
+   "surface_cm2": 1470.7,
+   "filament_g": {
+    "solid": 2414,
+    "typical": 548
+   },
+   "triangles": 2008638,
+   "vertices": 1004321,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "381_5465",
+     "381_5466",
+     "381_5467",
+     "381_5468",
+     "382_5465",
+     "382_5466",
+     "382_5467",
+     "382_5468",
+     "383_5465",
+     "383_5466",
+     "383_5467",
+     "383_5468",
+     "384_5466",
+     "384_5467",
+     "384_5468"
+    ],
+    "rlp": [
+     "384_5465"
+    ],
+    "rlpCells": 1,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:05:19Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.6,
+    "write": 2.7
+   }
+  },
+  {
+   "id": "E378_N5464",
+   "grid": {
+    "col": 189,
+    "row": 2732
+   },
+   "bboxUTM": [
+    378000,
+    5464000,
+    380000,
+    5466000
+   ],
+   "wgs84": [
+    7.320713,
+    49.3165359,
+    7.3488318,
+    49.334915
+   ],
+   "wgs84Corners": [
+    [
+     7.3213247,
+     49.3165359
+    ],
+    [
+     7.3488318,
+     49.3169323
+    ],
+    [
+     7.3482302,
+     49.334915
+    ],
+    [
+     7.320713,
+     49.3345184
+    ]
+   ],
+   "files": {
+    "3mf": "E378_N5464.3mf",
+    "png": "E378_N5464.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 15.241,
+    "max": 39.618,
+    "mean": 19.039
+   },
+   "h_m": {
+    "min": 227.77,
+    "max": 331.38,
+    "mean": 243.92
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 13.952,
+   "volume_cm3": 1051.7,
+   "surface_cm2": 1328.6,
+   "filament_g": {
+    "solid": 1304,
+    "typical": 364
+   },
+   "triangles": 2008586,
+   "vertices": 1004295,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "377_5463",
+     "377_5464",
+     "377_5465",
+     "377_5466",
+     "378_5463",
+     "378_5464",
+     "378_5465",
+     "378_5466",
+     "379_5463",
+     "379_5464",
+     "379_5465",
+     "379_5466",
+     "380_5463",
+     "380_5464",
+     "380_5465",
+     "380_5466"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:51Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.9
+   }
+  },
+  {
+   "id": "E380_N5464",
+   "grid": {
+    "col": 190,
+    "row": 2732
+   },
+   "bboxUTM": [
+    380000,
+    5464000,
+    382000,
+    5466000
+   ],
+   "wgs84": [
+    7.3482302,
+    49.3169323,
+    7.3763396,
+    49.3353051
+   ],
+   "wgs84Corners": [
+    [
+     7.3488318,
+     49.3169323
+    ],
+    [
+     7.3763396,
+     49.3173221
+    ],
+    [
+     7.375748,
+     49.3353051
+    ],
+    [
+     7.3482302,
+     49.334915
+    ]
+   ],
+   "files": {
+    "3mf": "E380_N5464.3mf",
+    "png": "E380_N5464.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 15.778,
+    "max": 42.284,
+    "mean": 25.056
+   },
+   "h_m": {
+    "min": 230.05,
+    "max": 342.71,
+    "mean": 269.49
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 14.305,
+   "volume_cm3": 1384.9,
+   "surface_cm2": 1387.3,
+   "filament_g": {
+    "solid": 1717,
+    "typical": 433
+   },
+   "triangles": 2008634,
+   "vertices": 1004319,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "379_5463",
+     "379_5464",
+     "379_5465",
+     "379_5466",
+     "380_5463",
+     "380_5464",
+     "380_5465",
+     "380_5466",
+     "381_5463",
+     "381_5464",
+     "381_5465",
+     "381_5466",
+     "382_5463",
+     "382_5464",
+     "382_5465",
+     "382_5466"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:56Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E382_N5464",
+   "grid": {
+    "col": 191,
+    "row": 2732
+   },
+   "bboxUTM": [
+    382000,
+    5464000,
+    384000,
+    5466000
+   ],
+   "wgs84": [
+    7.375748,
+    49.3173221,
+    7.4038479,
+    49.3356886
+   ],
+   "wgs84Corners": [
+    [
+     7.3763396,
+     49.3173221
+    ],
+    [
+     7.4038479,
+     49.3177054
+    ],
+    [
+     7.4032663,
+     49.3356886
+    ],
+    [
+     7.375748,
+     49.3353051
+    ]
+   ],
+   "files": {
+    "3mf": "E382_N5464.3mf",
+    "png": "E382_N5464.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 19.739,
+    "max": 47.954,
+    "mean": 33.063
+   },
+   "h_m": {
+    "min": 246.89,
+    "max": 366.8,
+    "mean": 303.52
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 17.791,
+   "volume_cm3": 1828.1,
+   "surface_cm2": 1502.9,
+   "filament_g": {
+    "solid": 2267,
+    "typical": 530
+   },
+   "triangles": 2008630,
+   "vertices": 1004317,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "381_5463",
+     "381_5464",
+     "381_5465",
+     "381_5466",
+     "382_5463",
+     "382_5464",
+     "382_5465",
+     "382_5466",
+     "383_5463",
+     "383_5464",
+     "383_5465",
+     "383_5466",
+     "384_5466"
+    ],
+    "rlp": [
+     "384_5463",
+     "384_5464",
+     "384_5465"
+    ],
+    "rlpCells": 2001,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:05:02Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E376_N5462",
+   "grid": {
+    "col": 188,
+    "row": 2731
+   },
+   "bboxUTM": [
+    376000,
+    5462000,
+    378000,
+    5464000
+   ],
+   "wgs84": [
+    7.2938181,
+    49.2981507,
+    7.3219357,
+    49.3165359
+   ],
+   "wgs84Corners": [
+    [
+     7.2944391,
+     49.2981507
+    ],
+    [
+     7.3219357,
+     49.2985533
+    ],
+    [
+     7.3213247,
+     49.3165359
+    ],
+    [
+     7.2938181,
+     49.316133
+    ]
+   ],
+   "files": {
+    "3mf": "E376_N5462.3mf",
+    "png": "E376_N5462.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 13.787,
+    "max": 21.217,
+    "mean": 15.883
+   },
+   "h_m": {
+    "min": 221.6,
+    "max": 253.17,
+    "mean": 230.5
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 11.968,
+   "volume_cm3": 876.9,
+   "surface_cm2": 1287.1,
+   "filament_g": {
+    "solid": 1087,
+    "typical": 326
+   },
+   "triangles": 2008586,
+   "vertices": 1004295,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "375_5461",
+     "375_5462",
+     "375_5463",
+     "375_5464",
+     "376_5461",
+     "376_5462",
+     "376_5463",
+     "376_5464",
+     "377_5461",
+     "377_5462",
+     "377_5463",
+     "377_5464",
+     "378_5461",
+     "378_5462",
+     "378_5463",
+     "378_5464"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:05:24Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.7
+   }
+  },
+  {
+   "id": "E378_N5462",
+   "grid": {
+    "col": 189,
+    "row": 2731
+   },
+   "bboxUTM": [
+    378000,
+    5462000,
+    380000,
+    5464000
+   ],
+   "wgs84": [
+    7.3213247,
+    49.2985533,
+    7.3494328,
+    49.3169323
+   ],
+   "wgs84Corners": [
+    [
+     7.3219357,
+     49.2985533
+    ],
+    [
+     7.3494328,
+     49.2989495
+    ],
+    [
+     7.3488318,
+     49.3169323
+    ],
+    [
+     7.3213247,
+     49.3165359
+    ]
+   ],
+   "files": {
+    "3mf": "E378_N5462.3mf",
+    "png": "E378_N5462.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 14.018,
+    "max": 43.546,
+    "mean": 20.336
+   },
+   "h_m": {
+    "min": 222.57,
+    "max": 348.07,
+    "mean": 249.43
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 12.018,
+   "volume_cm3": 1123.2,
+   "surface_cm2": 1365.3,
+   "filament_g": {
+    "solid": 1393,
+    "typical": 382
+   },
+   "triangles": 2008606,
+   "vertices": 1004305,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "377_5461",
+     "377_5462",
+     "377_5463",
+     "377_5464",
+     "378_5461",
+     "378_5462",
+     "378_5463",
+     "378_5464",
+     "379_5461",
+     "379_5462",
+     "379_5463",
+     "379_5464",
+     "380_5461",
+     "380_5462",
+     "380_5463",
+     "380_5464"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:33Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.7,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E380_N5462",
+   "grid": {
+    "col": 190,
+    "row": 2731
+   },
+   "bboxUTM": [
+    380000,
+    5462000,
+    382000,
+    5464000
+   ],
+   "wgs84": [
+    7.3488318,
+    49.2989495,
+    7.3769306,
+    49.3173221
+   ],
+   "wgs84Corners": [
+    [
+     7.3494328,
+     49.2989495
+    ],
+    [
+     7.3769306,
+     49.2993391
+    ],
+    [
+     7.3763396,
+     49.3173221
+    ],
+    [
+     7.3488318,
+     49.3169323
+    ]
+   ],
+   "files": {
+    "3mf": "E380_N5462.3mf",
+    "png": "E380_N5462.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 17.266,
+    "max": 42.989,
+    "mean": 25.528
+   },
+   "h_m": {
+    "min": 236.38,
+    "max": 345.71,
+    "mean": 271.49
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 15.274,
+   "volume_cm3": 1411.1,
+   "surface_cm2": 1401.1,
+   "filament_g": {
+    "solid": 1750,
+    "typical": 440
+   },
+   "triangles": 2008654,
+   "vertices": 1004329,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "379_5461",
+     "379_5462",
+     "379_5463",
+     "379_5464",
+     "380_5461",
+     "380_5462",
+     "380_5463",
+     "380_5464",
+     "381_5461",
+     "381_5462",
+     "381_5463",
+     "381_5464",
+     "382_5461",
+     "382_5462",
+     "382_5463",
+     "382_5464"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:39Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.8,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E382_N5462",
+   "grid": {
+    "col": 191,
+    "row": 2731
+   },
+   "bboxUTM": [
+    382000,
+    5462000,
+    384000,
+    5464000
+   ],
+   "wgs84": [
+    7.3763396,
+    49.2993391,
+    7.4044289,
+    49.3177054
+   ],
+   "wgs84Corners": [
+    [
+     7.3769306,
+     49.2993391
+    ],
+    [
+     7.4044289,
+     49.2997221
+    ],
+    [
+     7.4038479,
+     49.3177054
+    ],
+    [
+     7.3763396,
+     49.3173221
+    ]
+   ],
+   "files": {
+    "3mf": "E382_N5462.3mf",
+    "png": "E382_N5462.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 19.196,
+    "max": 52.439,
+    "mean": 37.936
+   },
+   "h_m": {
+    "min": 244.58,
+    "max": 385.87,
+    "mean": 324.23
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 17.196,
+   "volume_cm3": 2098.5,
+   "surface_cm2": 1499.2,
+   "filament_g": {
+    "solid": 2602,
+    "typical": 580
+   },
+   "triangles": 2008650,
+   "vertices": 1004327,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "381_5461",
+     "381_5462",
+     "381_5463",
+     "381_5464",
+     "382_5461",
+     "382_5462",
+     "382_5463",
+     "382_5464",
+     "383_5463",
+     "383_5464"
+    ],
+    "rlp": [
+     "383_5461",
+     "383_5462",
+     "384_5461",
+     "384_5462",
+     "384_5463",
+     "384_5464"
+    ],
+    "rlpCells": 1003002,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:45Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.8,
+    "write": 2.9
+   }
+  },
+  {
+   "id": "E378_N5460",
+   "grid": {
+    "col": 189,
+    "row": 2730
+   },
+   "bboxUTM": [
+    378000,
+    5460000,
+    380000,
+    5462000
+   ],
+   "wgs84": [
+    7.3219357,
+    49.2805707,
+    7.3500332,
+    49.2989495
+   ],
+   "wgs84Corners": [
+    [
+     7.3225461,
+     49.2805707
+    ],
+    [
+     7.3500332,
+     49.2809666
+    ],
+    [
+     7.3494328,
+     49.2989495
+    ],
+    [
+     7.3219357,
+     49.2985533
+    ]
+   ],
+   "files": {
+    "3mf": "E378_N5460.3mf",
+    "png": "E378_N5460.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 15.199,
+    "max": 46.086,
+    "mean": 29.778
+   },
+   "h_m": {
+    "min": 227.6,
+    "max": 358.86,
+    "mean": 289.56
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 19.063,
+   "volume_cm3": 1646.2,
+   "surface_cm2": 1483.3,
+   "filament_g": {
+    "solid": 2041,
+    "typical": 494
+   },
+   "triangles": 2008610,
+   "vertices": 1004307,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "377_5459",
+     "377_5460",
+     "377_5461",
+     "377_5462",
+     "378_5459",
+     "378_5460",
+     "378_5461",
+     "378_5462",
+     "379_5459",
+     "379_5460",
+     "379_5461",
+     "379_5462",
+     "380_5459",
+     "380_5460",
+     "380_5461",
+     "380_5462"
+    ],
+    "rlp": [],
+    "rlpCells": 0,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:16Z",
+   "timings_s": {
+    "sample": 0.6,
+    "mesh": 2.8,
+    "write": 2.8
+   }
+  },
+  {
+   "id": "E380_N5460",
+   "grid": {
+    "col": 190,
+    "row": 2730
+   },
+   "bboxUTM": [
+    380000,
+    5460000,
+    382000,
+    5462000
+   ],
+   "wgs84": [
+    7.3494328,
+    49.2809666,
+    7.377521,
+    49.2993391
+   ],
+   "wgs84Corners": [
+    [
+     7.3500332,
+     49.2809666
+    ],
+    [
+     7.377521,
+     49.281356
+    ],
+    [
+     7.3769306,
+     49.2993391
+    ],
+    [
+     7.3494328,
+     49.2989495
+    ]
+   ],
+   "files": {
+    "3mf": "E380_N5460.3mf",
+    "png": "E380_N5460.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 17.043,
+    "max": 51.292,
+    "mean": 35.847
+   },
+   "h_m": {
+    "min": 235.43,
+    "max": 380.99,
+    "mean": 315.35
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 15.257,
+   "volume_cm3": 1982.4,
+   "surface_cm2": 1510.5,
+   "filament_g": {
+    "solid": 2458,
+    "typical": 560
+   },
+   "triangles": 2008658,
+   "vertices": 1004331,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "379_5459",
+     "379_5460",
+     "379_5461",
+     "379_5462",
+     "380_5459",
+     "380_5460",
+     "380_5461",
+     "380_5462",
+     "381_5459",
+     "381_5460",
+     "381_5461",
+     "381_5462",
+     "382_5460",
+     "382_5461",
+     "382_5462"
+    ],
+    "rlp": [
+     "382_5459"
+    ],
+    "rlpCells": 1,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:22Z",
+   "timings_s": {
+    "sample": 0.2,
+    "mesh": 2.8,
+    "write": 2.9
+   }
+  },
+  {
+   "id": "E382_N5460",
+   "grid": {
+    "col": 191,
+    "row": 2730
+   },
+   "bboxUTM": [
+    382000,
+    5460000,
+    384000,
+    5462000
+   ],
+   "wgs84": [
+    7.3769306,
+    49.281356,
+    7.4050094,
+    49.2997221
+   ],
+   "wgs84Corners": [
+    [
+     7.377521,
+     49.281356
+    ],
+    [
+     7.4050094,
+     49.2817387
+    ],
+    [
+     7.4044289,
+     49.2997221
+    ],
+    [
+     7.3769306,
+     49.2993391
+    ]
+   ],
+   "files": {
+    "3mf": "E382_N5460.3mf",
+    "png": "E382_N5460.png"
+   },
+   "datum_m": 180.0,
+   "z_mm": {
+    "min": 20.464,
+    "max": 50.933,
+    "mean": 39.338
+   },
+   "h_m": {
+    "min": 249.97,
+    "max": 379.46,
+    "mean": 330.19
+   },
+   "clampedVertices": 0,
+   "baseAboveRecess_mm": 21.532,
+   "volume_cm3": 2175.8,
+   "surface_cm2": 1529.7,
+   "filament_g": {
+    "solid": 2698,
+    "typical": 598
+   },
+   "triangles": 2008654,
+   "vertices": 1004329,
+   "watertight": true,
+   "sources": {
+    "sl": [
+     "381_5459",
+     "381_5460",
+     "381_5461",
+     "381_5462",
+     "382_5460",
+     "382_5461",
+     "382_5462"
+    ],
+    "rlp": [
+     "382_5459",
+     "383_5459",
+     "383_5460",
+     "383_5461",
+     "383_5462",
+     "384_5459",
+     "384_5460",
+     "384_5461",
+     "384_5462"
+    ],
+    "rlpCells": 2005002,
+    "rlpBiasMeasured_m": null
+   },
+   "created": "2026-11-02T00:04:28Z",
+   "timings_s": {
+    "sample": 0.3,
+    "mesh": 2.7,
+    "write": 2.8
+   }
+  }
+ ]
+}
