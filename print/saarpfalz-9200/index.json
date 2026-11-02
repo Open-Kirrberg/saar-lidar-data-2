@@ -1,14 +1,14 @@
 {
  "format": "sle-print3d-v1",
  "series": {
-  "key": "saarpfalz-8500",
-  "name_de": "Saarpfalz 1:8500",
-  "scale": 8500,
+  "key": "saarpfalz-9200",
+  "name_de": "Saarpfalz 1:9200",
+  "scale": 9200,
   "tile_m": 2000,
-  "tile_mm": 235.2941176470588,
+  "tile_mm": 217.3913043478261,
   "vertices": 1001,
   "cell_m": 2.0,
-  "cell_mm": 0.23529411764705882,
+  "cell_mm": 0.21739130434782608,
   "exag": 2.0,
   "datum_m": 180.0,
   "datumMode": "series",
@@ -22,12 +22,14 @@
   "role": "main",
   "printer": "stock",
   "placement_mm": [
-   19.4,
-   17.1
+   19.3043,
+   19.3043
   ],
   "zFormula": "z_mm = base_mm + (max(h, datum_m) − datum_m) / scale · 1000 · exag (datum_m of the tile)",
   "sampling": "area mean of the 1 m DGM (PixelIsArea) over a cell_m square centred on each vertex; vertices on the tile edges (shared edges bit-identical)",
   "frame": "mm, X = east, Y = north, Z up, origin = tile lower-left corner at z = 0",
+  "maxError_mm": 0.03,
+  "maxTriangles": 500000,
   "text": {
    "engraved": true,
    "depth_mm": 0.6,
@@ -66,8 +68,8 @@
   ],
   "printableHeight_mm": 250.0,
   "placement_mm": [
-   19.4,
-   17.1
+   19.3043,
+   19.3043
   ],
   "bedExcludeArea": [
    "0x0",
@@ -76,7 +78,7 @@
    "0x28"
   ],
   "loadLine": "G-code X 18–240, Y 1.0–1.5 plus a stroke to Y 11 at X 240; plate Y = G-code Y + 2 (≤ 13.5 mm incl. line width)",
-  "note_de": "Standardprofil „Bambu Lab P1S 0.4 nozzle“ – kein eigenes Druckerprofil nötig. 3MF öffnen und nicht anordnen/zentrieren: die Kachel liegt bei X 19.4–254.7, Y 17.1–252.4 mm, rechts neben dem Sperrbereich vorne links (18 × 28 mm) und hinter der Ladelinie. Zentriert würde sie den Sperrbereich berühren."
+  "note_de": "Standardprofil „Bambu Lab P1S 0.4 nozzle“ – kein eigenes Druckerprofil nötig. 3MF einfach öffnen: Bambu Studio setzt die Kachel in die Plattenmitte (X und Y 19.3–236.7 mm), frei vom Sperrbereich vorne links (18 × 28 mm) und von der Ladelinie. Nicht nach vorne links verschieben."
  },
  "filament": {
   "material": "PLA",
@@ -108,7 +110,7 @@
  "keysNeeded": 36,
  "attribution": "© GeoBasis-DE/LVGL-SL (2026), dl-de/by-2-0, Daten bearbeitet; © GeoBasis-DE/LVermGeoRP (2022), dl-de/by-2-0, www.lvermgeo.rlp.de, Daten bearbeitet",
  "disclaimer_de": "Geländemodell zum Anschauen (Hypothesen, keine Befunde). Schauen, nicht graben.",
- "updated": "2026-11-02T00:07:38Z",
+ "updated": "2026-11-02T11:48:02Z",
  "tiles": [
   {
    "id": "E378_N5466",
@@ -152,9 +154,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 16.401,
-    "max": 23.984,
-    "mean": 20.205
+    "min": 15.457,
+    "max": 22.463,
+    "mean": 18.972
    },
    "h_m": {
     "min": 232.7,
@@ -162,15 +164,16 @@
     "mean": 248.87
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 14.878,
-   "volume_cm3": 1116.2,
-   "surface_cm2": 1327.8,
+   "baseAboveRecess_mm": 13.768,
+   "volume_cm3": 894.2,
+   "surface_cm2": 1137.4,
    "filament_g": {
-    "solid": 1384,
-    "typical": 376
+    "solid": 1109,
+    "typical": 310
    },
-   "triangles": 2008594,
-   "vertices": 1004299,
+   "triangles": 302204,
+   "vertices": 151104,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -195,11 +198,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:08Z",
+   "created": "2026-11-02T11:45:22Z",
    "timings_s": {
-    "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.8
+    "sample": 0.3,
+    "simplify": 13.1,
+    "mesh": 0.5,
+    "write": 0.9
    }
   },
   {
@@ -244,9 +248,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 16.335,
-    "max": 39.049,
-    "mean": 21.478
+    "min": 15.396,
+    "max": 36.383,
+    "mean": 20.148
    },
    "h_m": {
     "min": 232.42,
@@ -254,15 +258,16 @@
     "mean": 254.28
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 14.843,
-   "volume_cm3": 1186.5,
-   "surface_cm2": 1360.1,
+   "baseAboveRecess_mm": 13.855,
+   "volume_cm3": 949.7,
+   "surface_cm2": 1165.0,
    "filament_g": {
-    "solid": 1471,
-    "typical": 393
+    "solid": 1178,
+    "typical": 324
    },
-   "triangles": 2008642,
-   "vertices": 1004323,
+   "triangles": 330624,
+   "vertices": 165314,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -287,11 +292,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:13Z",
+   "created": "2026-11-02T11:45:43Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.6,
-    "write": 2.8
+    "simplify": 20.2,
+    "mesh": 0.5,
+    "write": 1.0
    }
   },
   {
@@ -336,9 +342,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 19.305,
-    "max": 46.951,
-    "mean": 35.207
+    "min": 18.141,
+    "max": 43.683,
+    "mean": 32.833
    },
    "h_m": {
     "min": 245.05,
@@ -346,15 +352,16 @@
     "mean": 312.63
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 21.638,
-   "volume_cm3": 1947.1,
-   "surface_cm2": 1470.7,
+   "baseAboveRecess_mm": 20.074,
+   "volume_cm3": 1549.6,
+   "surface_cm2": 1259.4,
    "filament_g": {
-    "solid": 2414,
-    "typical": 548
+    "solid": 1922,
+    "typical": 448
    },
-   "triangles": 2008638,
-   "vertices": 1004321,
+   "triangles": 364344,
+   "vertices": 182174,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -380,11 +387,12 @@
     "rlpCells": 1,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:19Z",
+   "created": "2026-11-02T11:46:02Z",
    "timings_s": {
-    "sample": 0.2,
-    "mesh": 2.6,
-    "write": 2.7
+    "sample": 0.3,
+    "simplify": 17.0,
+    "mesh": 0.6,
+    "write": 1.0
    }
   },
   {
@@ -429,9 +437,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 15.241,
-    "max": 39.618,
-    "mean": 19.039
+    "min": 14.386,
+    "max": 36.908,
+    "mean": 17.895
    },
    "h_m": {
     "min": 227.77,
@@ -439,15 +447,16 @@
     "mean": 243.92
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 13.952,
-   "volume_cm3": 1051.7,
-   "surface_cm2": 1328.6,
+   "baseAboveRecess_mm": 13.043,
+   "volume_cm3": 843.4,
+   "surface_cm2": 1138.2,
    "filament_g": {
-    "solid": 1304,
-    "typical": 364
+    "solid": 1046,
+    "typical": 301
    },
-   "triangles": 2008586,
-   "vertices": 1004295,
+   "triangles": 352682,
+   "vertices": 176343,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -472,11 +481,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:51Z",
+   "created": "2026-11-02T11:44:25Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.9
+    "simplify": 16.3,
+    "mesh": 0.5,
+    "write": 1.0
    }
   },
   {
@@ -521,9 +531,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 15.778,
-    "max": 42.284,
-    "mean": 25.056
+    "min": 14.882,
+    "max": 39.371,
+    "mean": 23.454
    },
    "h_m": {
     "min": 230.05,
@@ -531,15 +541,16 @@
     "mean": 269.49
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 14.305,
-   "volume_cm3": 1384.9,
-   "surface_cm2": 1387.3,
+   "baseAboveRecess_mm": 13.231,
+   "volume_cm3": 1106.2,
+   "surface_cm2": 1188.2,
    "filament_g": {
-    "solid": 1717,
-    "typical": 433
+    "solid": 1372,
+    "typical": 356
    },
-   "triangles": 2008634,
-   "vertices": 1004319,
+   "triangles": 376302,
+   "vertices": 188153,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -564,11 +575,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:56Z",
+   "created": "2026-11-02T11:44:45Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.8
+    "simplify": 18.1,
+    "mesh": 0.7,
+    "write": 1.4
    }
   },
   {
@@ -613,9 +625,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 19.739,
-    "max": 47.954,
-    "mean": 33.063
+    "min": 18.542,
+    "max": 44.61,
+    "mean": 30.852
    },
    "h_m": {
     "min": 246.89,
@@ -623,15 +635,16 @@
     "mean": 303.52
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 17.791,
-   "volume_cm3": 1828.1,
-   "surface_cm2": 1502.9,
+   "baseAboveRecess_mm": 16.587,
+   "volume_cm3": 1455.7,
+   "surface_cm2": 1286.8,
    "filament_g": {
-    "solid": 2267,
-    "typical": 530
+    "solid": 1805,
+    "typical": 434
    },
-   "triangles": 2008630,
-   "vertices": 1004317,
+   "triangles": 409670,
+   "vertices": 204837,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -657,11 +670,12 @@
     "rlpCells": 2001,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:02Z",
+   "created": "2026-11-02T11:45:07Z",
    "timings_s": {
-    "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.8
+    "sample": 0.4,
+    "simplify": 19.5,
+    "mesh": 0.7,
+    "write": 1.3
    }
   },
   {
@@ -706,9 +720,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 13.787,
-    "max": 21.217,
-    "mean": 15.883
+    "min": 13.042,
+    "max": 19.907,
+    "mean": 14.979
    },
    "h_m": {
     "min": 221.6,
@@ -716,15 +730,16 @@
     "mean": 230.5
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 11.968,
-   "volume_cm3": 876.9,
-   "surface_cm2": 1287.1,
+   "baseAboveRecess_mm": 11.206,
+   "volume_cm3": 705.5,
+   "surface_cm2": 1102.6,
    "filament_g": {
-    "solid": 1087,
-    "typical": 326
+    "solid": 875,
+    "typical": 271
    },
-   "triangles": 2008586,
-   "vertices": 1004295,
+   "triangles": 235808,
+   "vertices": 117906,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -749,11 +764,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:24Z",
+   "created": "2026-11-02T11:46:14Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.7
+    "simplify": 10.7,
+    "mesh": 0.3,
+    "write": 0.7
    }
   },
   {
@@ -798,9 +814,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 14.018,
-    "max": 43.546,
-    "mean": 20.336
+    "min": 13.255,
+    "max": 40.537,
+    "mean": 19.093
    },
    "h_m": {
     "min": 222.57,
@@ -808,15 +824,16 @@
     "mean": 249.43
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 12.018,
-   "volume_cm3": 1123.2,
-   "surface_cm2": 1365.3,
+   "baseAboveRecess_mm": 11.255,
+   "volume_cm3": 899.8,
+   "surface_cm2": 1169.5,
    "filament_g": {
-    "solid": 1393,
-    "typical": 382
+    "solid": 1116,
+    "typical": 315
    },
-   "triangles": 2008606,
-   "vertices": 1004305,
+   "triangles": 356924,
+   "vertices": 178464,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -841,11 +858,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:33Z",
+   "created": "2026-11-02T11:43:28Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.7,
-    "write": 2.8
+    "simplify": 14.7,
+    "mesh": 0.6,
+    "write": 1.1
    }
   },
   {
@@ -890,9 +908,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 17.266,
-    "max": 42.989,
-    "mean": 25.528
+    "min": 16.257,
+    "max": 40.023,
+    "mean": 23.89
    },
    "h_m": {
     "min": 236.38,
@@ -900,15 +918,16 @@
     "mean": 271.49
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 15.274,
-   "volume_cm3": 1411.1,
-   "surface_cm2": 1401.1,
+   "baseAboveRecess_mm": 14.264,
+   "volume_cm3": 1126.9,
+   "surface_cm2": 1200.0,
    "filament_g": {
-    "solid": 1750,
-    "typical": 440
+    "solid": 1397,
+    "typical": 361
    },
-   "triangles": 2008654,
-   "vertices": 1004329,
+   "triangles": 458178,
+   "vertices": 229091,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -933,11 +952,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:39Z",
+   "created": "2026-11-02T11:43:47Z",
    "timings_s": {
     "sample": 0.2,
-    "mesh": 2.8,
-    "write": 2.8
+    "simplify": 17.0,
+    "mesh": 0.7,
+    "write": 1.2
    }
   },
   {
@@ -982,9 +1002,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 19.196,
-    "max": 52.439,
-    "mean": 37.936
+    "min": 18.04,
+    "max": 48.754,
+    "mean": 35.354
    },
    "h_m": {
     "min": 244.58,
@@ -992,15 +1012,16 @@
     "mean": 324.23
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 17.196,
-   "volume_cm3": 2098.5,
-   "surface_cm2": 1499.2,
+   "baseAboveRecess_mm": 16.04,
+   "volume_cm3": 1668.9,
+   "surface_cm2": 1283.8,
    "filament_g": {
-    "solid": 2602,
-    "typical": 580
+    "solid": 2069,
+    "typical": 473
    },
-   "triangles": 2008650,
-   "vertices": 1004327,
+   "triangles": 388794,
+   "vertices": 194399,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -1026,11 +1047,12 @@
     "rlpCells": 1003002,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:45Z",
+   "created": "2026-11-02T11:44:07Z",
    "timings_s": {
-    "sample": 0.2,
-    "mesh": 2.8,
-    "write": 2.9
+    "sample": 0.3,
+    "simplify": 17.7,
+    "mesh": 0.6,
+    "write": 1.1
    }
   },
   {
@@ -1075,9 +1097,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 15.199,
-    "max": 46.086,
-    "mean": 29.778
+    "min": 14.347,
+    "max": 42.884,
+    "mean": 27.817
    },
    "h_m": {
     "min": 227.6,
@@ -1085,15 +1107,16 @@
     "mean": 289.56
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 19.063,
-   "volume_cm3": 1646.2,
-   "surface_cm2": 1483.3,
+   "baseAboveRecess_mm": 17.338,
+   "volume_cm3": 1312.2,
+   "surface_cm2": 1270.3,
    "filament_g": {
-    "solid": 2041,
-    "typical": 494
+    "solid": 1627,
+    "typical": 405
    },
-   "triangles": 2008610,
-   "vertices": 1004307,
+   "triangles": 411048,
+   "vertices": 205526,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -1118,11 +1141,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:16Z",
+   "created": "2026-11-02T11:42:37Z",
    "timings_s": {
-    "sample": 0.6,
-    "mesh": 2.8,
-    "write": 2.8
+    "sample": 1.2,
+    "simplify": 16.9,
+    "mesh": 0.7,
+    "write": 1.2
    }
   },
   {
@@ -1167,9 +1191,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 17.043,
-    "max": 51.292,
-    "mean": 35.847
+    "min": 16.051,
+    "max": 47.694,
+    "mean": 33.424
    },
    "h_m": {
     "min": 235.43,
@@ -1177,15 +1201,16 @@
     "mean": 315.35
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 15.257,
-   "volume_cm3": 1982.4,
-   "surface_cm2": 1510.5,
+   "baseAboveRecess_mm": 14.248,
+   "volume_cm3": 1577.4,
+   "surface_cm2": 1293.5,
    "filament_g": {
-    "solid": 2458,
-    "typical": 560
+    "solid": 1956,
+    "typical": 457
    },
-   "triangles": 2008658,
-   "vertices": 1004331,
+   "triangles": 348766,
+   "vertices": 174385,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -1211,11 +1236,12 @@
     "rlpCells": 1,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:22Z",
+   "created": "2026-11-02T11:42:53Z",
    "timings_s": {
-    "sample": 0.2,
-    "mesh": 2.8,
-    "write": 2.9
+    "sample": 0.3,
+    "simplify": 15.2,
+    "mesh": 0.5,
+    "write": 0.9
    }
   },
   {
@@ -1260,9 +1286,9 @@
    },
    "datum_m": 180.0,
    "z_mm": {
-    "min": 20.464,
-    "max": 50.933,
-    "mean": 39.338
+    "min": 19.211,
+    "max": 47.362,
+    "mean": 36.649
    },
    "h_m": {
     "min": 249.97,
@@ -1270,15 +1296,16 @@
     "mean": 330.19
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 21.532,
-   "volume_cm3": 2175.8,
-   "surface_cm2": 1529.7,
+   "baseAboveRecess_mm": 19.551,
+   "volume_cm3": 1729.9,
+   "surface_cm2": 1309.7,
    "filament_g": {
-    "solid": 2698,
-    "typical": 598
+    "solid": 2145,
+    "typical": 487
    },
-   "triangles": 2008654,
-   "vertices": 1004329,
+   "triangles": 327280,
+   "vertices": 163642,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -1304,11 +1331,12 @@
     "rlpCells": 2005002,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:04:28Z",
+   "created": "2026-11-02T11:43:11Z",
    "timings_s": {
     "sample": 0.3,
-    "mesh": 2.7,
-    "write": 2.8
+    "simplify": 16.1,
+    "mesh": 0.5,
+    "write": 1.0
    }
   }
  ]

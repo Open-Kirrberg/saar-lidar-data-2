@@ -11,8 +11,8 @@ Second static data repository of the [Saar LiDAR Explorer](https://open-kirrberg
 | `overall/xyz/<layer>/{z}/{x}/{y}.png` | Leaflet (EPSG:3857) tiles of the relief layers and historic maps up to zoom 17 (the app overzooms beyond). Referenced from `https://open-kirrberg.github.io/saar-lidar-data/overall/manifest.json`. |
 | `print/<series>/` | 3D-printable terrain tiles: `index.json`, `<id>.3mf` (Bambu Studio / any slicer), `<id>.png` preview, `layout.png`, `keys/` (bowtie connector), `printer/` (Bambu Studio printer preset). STL tile meshes are not published (3MF only). |
 
-- `print/detail-2125/` – Detail 1:2125: 6 3MF-Kacheln
-- `print/saarpfalz-8500/` – Saarpfalz 1:8500: 13 3MF-Kacheln
+- `print/detail-2300/` – Detail 1:2300: 6 3MF-Kacheln
+- `print/saarpfalz-9200/` – Saarpfalz 1:9200: 13 3MF-Kacheln
 
 ## Licences and attribution
 

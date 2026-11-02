@@ -1,14 +1,14 @@
 {
  "format": "sle-print3d-v1",
  "series": {
-  "key": "detail-2125",
-  "name_de": "Detail 1:2125",
-  "scale": 2125,
+  "key": "detail-2300",
+  "name_de": "Detail 1:2300",
+  "scale": 2300,
   "tile_m": 500,
-  "tile_mm": 235.2941176470588,
+  "tile_mm": 217.3913043478261,
   "vertices": 1001,
   "cell_m": 0.5,
-  "cell_mm": 0.23529411764705882,
+  "cell_mm": 0.21739130434782608,
   "exag": 1.5,
   "datum_m": null,
   "datumMode": "set",
@@ -22,12 +22,14 @@
   "role": "detail",
   "printer": "stock",
   "placement_mm": [
-   19.4,
-   17.1
+   19.3043,
+   19.3043
   ],
   "zFormula": "z_mm = base_mm + (max(h, datum_m) − datum_m) / scale · 1000 · exag (datum_m of the tile)",
   "sampling": "area mean of the 1 m DGM (PixelIsArea) over a cell_m square centred on each vertex; vertices on the tile edges (shared edges bit-identical)",
   "frame": "mm, X = east, Y = north, Z up, origin = tile lower-left corner at z = 0",
+  "maxError_mm": 0.03,
+  "maxTriangles": 500000,
   "text": {
    "engraved": true,
    "depth_mm": 0.6,
@@ -66,8 +68,8 @@
   ],
   "printableHeight_mm": 250.0,
   "placement_mm": [
-   19.4,
-   17.1
+   19.3043,
+   19.3043
   ],
   "bedExcludeArea": [
    "0x0",
@@ -76,7 +78,7 @@
    "0x28"
   ],
   "loadLine": "G-code X 18–240, Y 1.0–1.5 plus a stroke to Y 11 at X 240; plate Y = G-code Y + 2 (≤ 13.5 mm incl. line width)",
-  "note_de": "Standardprofil „Bambu Lab P1S 0.4 nozzle“ – kein eigenes Druckerprofil nötig. 3MF öffnen und nicht anordnen/zentrieren: die Kachel liegt bei X 19.4–254.7, Y 17.1–252.4 mm, rechts neben dem Sperrbereich vorne links (18 × 28 mm) und hinter der Ladelinie. Zentriert würde sie den Sperrbereich berühren."
+  "note_de": "Standardprofil „Bambu Lab P1S 0.4 nozzle“ – kein eigenes Druckerprofil nötig. 3MF einfach öffnen: Bambu Studio setzt die Kachel in die Plattenmitte (X und Y 19.3–236.7 mm), frei vom Sperrbereich vorne links (18 × 28 mm) und von der Ladelinie. Nicht nach vorne links verschieben."
  },
  "filament": {
   "material": "PLA",
@@ -101,7 +103,7 @@
  "keysNeeded": 10,
  "attribution": "© GeoBasis-DE/LVGL-SL (2026), dl-de/by-2-0, Daten bearbeitet",
  "disclaimer_de": "Geländemodell zum Anschauen (Hypothesen, keine Befunde). Schauen, nicht graben.",
- "updated": "2026-11-02T00:07:38Z",
+ "updated": "2026-11-02T11:48:02Z",
  "tiles": [
   {
    "id": "E382_N5466",
@@ -145,9 +147,9 @@
    },
    "datum_m": 274.0,
    "z_mm": {
-    "min": 26.525,
-    "max": 62.532,
-    "mean": 52.516
+    "min": 24.811,
+    "max": 58.078,
+    "mean": 48.824
    },
    "h_m": {
     "min": 305.91,
@@ -155,15 +157,16 @@
     "mean": 342.73
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 24.525,
-   "volume_cm3": 2905.6,
-   "surface_cm2": 1591.4,
+   "baseAboveRecess_mm": 22.811,
+   "volume_cm3": 2305.5,
+   "surface_cm2": 1363.2,
    "filament_g": {
-    "solid": 3603,
-    "typical": 742
+    "solid": 2859,
+    "typical": 601
    },
-   "triangles": 2008374,
-   "vertices": 1004189,
+   "triangles": 298166,
+   "vertices": 149085,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -176,11 +179,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:39Z",
+   "created": "2026-11-02T11:47:03Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.6,
-    "write": 2.6
+    "simplify": 13.0,
+    "mesh": 0.6,
+    "write": 1.2
    }
   },
   {
@@ -225,9 +229,9 @@
    },
    "datum_m": 274.0,
    "z_mm": {
-    "min": 7.554,
-    "max": 69.04,
-    "mean": 51.144
+    "min": 7.284,
+    "max": 64.091,
+    "mean": 47.557
    },
    "h_m": {
     "min": 279.03,
@@ -235,15 +239,16 @@
     "mean": 340.79
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 5.653,
-   "volume_cm3": 2829.2,
-   "surface_cm2": 1631.9,
+   "baseAboveRecess_mm": 5.375,
+   "volume_cm3": 2245.2,
+   "surface_cm2": 1397.9,
    "filament_g": {
-    "solid": 3508,
-    "typical": 733
+    "solid": 2784,
+    "typical": 594
    },
-   "triangles": 2008562,
-   "vertices": 1004283,
+   "triangles": 337472,
+   "vertices": 168738,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -256,11 +261,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:33Z",
+   "created": "2026-11-02T11:46:48Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.7,
-    "write": 2.7
+    "simplify": 12.6,
+    "mesh": 0.4,
+    "write": 1.2
    }
   },
   {
@@ -305,9 +311,9 @@
    },
    "datum_m": 238.0,
    "z_mm": {
-    "min": 8.906,
-    "max": 29.878,
-    "mean": 20.996
+    "min": 8.533,
+    "max": 27.909,
+    "mean": 19.703
    },
    "h_m": {
     "min": 244.95,
@@ -315,15 +321,16 @@
     "mean": 262.08
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 7.245,
-   "volume_cm3": 1160.1,
-   "surface_cm2": 1325.3,
+   "baseAboveRecess_mm": 6.826,
+   "volume_cm3": 928.9,
+   "surface_cm2": 1136.2,
    "filament_g": {
-    "solid": 1439,
-    "typical": 383
+    "solid": 1152,
+    "typical": 316
    },
-   "triangles": 2008746,
-   "vertices": 1004375,
+   "triangles": 344516,
+   "vertices": 172260,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -336,11 +343,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:54Z",
+   "created": "2026-11-02T11:47:49Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.6,
-    "write": 2.6
+    "simplify": 13.1,
+    "mesh": 0.4,
+    "write": 0.7
    }
   },
   {
@@ -385,9 +393,9 @@
    },
    "datum_m": 238.0,
    "z_mm": {
-    "min": 8.694,
-    "max": 54.391,
-    "mean": 17.068
+    "min": 8.337,
+    "max": 50.557,
+    "mean": 16.074
    },
    "h_m": {
     "min": 244.65,
@@ -395,15 +403,16 @@
     "mean": 256.51
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 7.195,
-   "volume_cm3": 942.0,
-   "surface_cm2": 1362.0,
+   "baseAboveRecess_mm": 6.78,
+   "volume_cm3": 756.9,
+   "surface_cm2": 1167.5,
    "filament_g": {
-    "solid": 1168,
-    "typical": 347
+    "solid": 939,
+    "typical": 288
    },
-   "triangles": 2008602,
-   "vertices": 1004303,
+   "triangles": 383720,
+   "vertices": 191862,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -416,11 +425,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:06:00Z",
+   "created": "2026-11-02T11:48:02Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.6,
-    "write": 2.6
+    "simplify": 11.7,
+    "mesh": 0.4,
+    "write": 0.7
    }
   },
   {
@@ -465,9 +475,9 @@
    },
    "datum_m": 238.0,
    "z_mm": {
-    "min": 7.678,
-    "max": 39.834,
-    "mean": 19.39
+    "min": 7.398,
+    "max": 37.108,
+    "mean": 18.219
    },
    "h_m": {
     "min": 243.21,
@@ -475,15 +485,16 @@
     "mean": 259.8
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 5.678,
-   "volume_cm3": 1071.3,
-   "surface_cm2": 1323.7,
+   "baseAboveRecess_mm": 5.398,
+   "volume_cm3": 858.9,
+   "surface_cm2": 1134.8,
    "filament_g": {
-    "solid": 1328,
-    "typical": 367
+    "solid": 1065,
+    "typical": 303
    },
-   "triangles": 2008586,
-   "vertices": 1004295,
+   "triangles": 320714,
+   "vertices": 160359,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -496,11 +507,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:44Z",
+   "created": "2026-11-02T11:47:20Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.6,
-    "write": 2.6
+    "simplify": 15.5,
+    "mesh": 0.5,
+    "write": 1.0
    }
   },
   {
@@ -545,9 +557,9 @@
    },
    "datum_m": 238.0,
    "z_mm": {
-    "min": 8.645,
-    "max": 60.418,
-    "mean": 28.617
+    "min": 8.291,
+    "max": 56.125,
+    "mean": 26.744
    },
    "h_m": {
     "min": 244.58,
@@ -555,15 +567,16 @@
     "mean": 272.87
    },
    "clampedVertices": 0,
-   "baseAboveRecess_mm": 7.082,
-   "volume_cm3": 1582.0,
-   "surface_cm2": 1436.3,
+   "baseAboveRecess_mm": 6.696,
+   "volume_cm3": 1261.6,
+   "surface_cm2": 1230.8,
    "filament_g": {
-    "solid": 1962,
-    "typical": 476
+    "solid": 1564,
+    "typical": 390
    },
-   "triangles": 2008442,
-   "vertices": 1004223,
+   "triangles": 343894,
+   "vertices": 171949,
+   "maxError_mm": 0.03,
    "watertight": true,
    "sources": {
     "sl": [
@@ -576,11 +589,12 @@
     "rlpCells": 0,
     "rlpBiasMeasured_m": null
    },
-   "created": "2026-11-02T00:05:49Z",
+   "created": "2026-11-02T11:47:35Z",
    "timings_s": {
     "sample": 0.0,
-    "mesh": 2.6,
-    "write": 2.6
+    "simplify": 13.4,
+    "mesh": 0.5,
+    "write": 1.0
    }
   }
  ],
