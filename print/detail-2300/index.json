@@ -83,9 +83,9 @@
  "filament": {
   "material": "PLA",
   "density_g_cm3": 1.24,
-  "shell_mm": 1.2,
-  "infill": 0.15,
-  "formula": "solid = V·ρ; typical = ρ·(S + infill·(V − S)) with S = min(V, A·shell_mm) (A = mesh surface, shell ≈ 3 walls × 0.4 mm, also standing in for top/bottom skins); ±25 %"
+  "shell_mm": 0.9,
+  "infill": 0.155,
+  "formula": "solid = V·ρ; typical = ρ·(S + infill·(V − S)) with S = min(V, A·shell_mm) (A = mesh surface; shell_mm / infill fitted to Bambu Studio slices with the stock process); recommended = same with slicer.estimate shell_mm / infill; ±10 %"
  },
  "layout": "layout.png",
  "sets": {
@@ -103,7 +103,7 @@
  "keysNeeded": 10,
  "attribution": "© GeoBasis-DE/LVGL-SL (2026), dl-de/by-2-0, Daten bearbeitet",
  "disclaimer_de": "Geländemodell zum Anschauen (Hypothesen, keine Befunde). Schauen, nicht graben.",
- "updated": "2026-11-02T11:48:02Z",
+ "updated": "2026-11-02T19:00:42Z",
  "tiles": [
   {
    "id": "E382_N5466",
@@ -162,7 +162,8 @@
    "surface_cm2": 1363.2,
    "filament_g": {
     "solid": 2859,
-    "typical": 601
+    "typical": 572,
+    "recommended": 264
    },
    "triangles": 298166,
    "vertices": 149085,
@@ -244,7 +245,8 @@
    "surface_cm2": 1397.9,
    "filament_g": {
     "solid": 2784,
-    "typical": 594
+    "typical": 563,
+    "recommended": 268
    },
    "triangles": 337472,
    "vertices": 168738,
@@ -326,7 +328,8 @@
    "surface_cm2": 1136.2,
    "filament_g": {
     "solid": 1152,
-    "typical": 316
+    "typical": 286,
+    "recommended": 196
    },
    "triangles": 344516,
    "vertices": 172260,
@@ -408,7 +411,8 @@
    "surface_cm2": 1167.5,
    "filament_g": {
     "solid": 939,
-    "typical": 288
+    "typical": 256,
+    "recommended": 196
    },
    "triangles": 383720,
    "vertices": 191862,
@@ -490,7 +494,8 @@
    "surface_cm2": 1134.8,
    "filament_g": {
     "solid": 1065,
-    "typical": 303
+    "typical": 272,
+    "recommended": 194
    },
    "triangles": 320714,
    "vertices": 160359,
@@ -572,7 +577,8 @@
    "surface_cm2": 1230.8,
    "filament_g": {
     "solid": 1564,
-    "typical": 390
+    "typical": 359,
+    "recommended": 218
    },
    "triangles": 343894,
    "vertices": 171949,
@@ -598,6 +604,30 @@
    }
   }
  ],
+ "slicer": {
+  "base": "0.20mm Standard @BBL X1C",
+  "settings": {
+   "sparse_infill_pattern": "lightning",
+   "sparse_infill_density": "10%",
+   "wall_loops": 3,
+   "top_shell_layers": 6,
+   "top_shell_thickness": 1.2
+  },
+  "savingPct": [
+   24,
+   55
+  ],
+  "timeSavingPct": [
+   -3,
+   22
+  ],
+  "estimate": {
+   "shell_mm": 1.25,
+   "infill": 0.02
+  },
+  "inFile": false,
+  "note_de": "Filament sparen: in Bambu Studio unter Prozess → Stärke Füllmuster „Blitz“, Fülldichte 10 %, Wandlinien 3, Obere Schalenschichten 6 (Dicke der oberen Schale 1,2 mm) – spart ≈ 24–55 % Filament (dicke Kacheln am meisten), Druckzeit etwa gleich bis ≈ 22 % kürzer als mit dem Standardprozess. Das Modell bleibt gleich; die 3MF kann diese Einstellungen nicht mitbringen – einmal als eigenes Prozessprofil speichern."
+ },
  "setDatum_m": {
   "karlsberg": 274.0,
   "merburg": 238.0
